@@ -1,0 +1,8 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.resume {
+    width: 75%;
+    margin: auto;
+}
