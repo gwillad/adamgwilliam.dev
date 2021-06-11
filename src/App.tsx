@@ -1,7 +1,8 @@
 import './App.css';
 import { Route, Redirect, BrowserRouter } from 'react-router-dom'
-import Resume from './pages/Resume'
+import Resume from './pages/resume/Resume'
 import React from 'react';
+import Blog from './pages/blog/Blog';
 
 class App extends React.Component {
   componentDidMount() {
@@ -17,6 +18,9 @@ class App extends React.Component {
           </Route>
           <Route exact path="/resume">
             <Resume />
+          </Route>
+          <Route exact path="/blog">
+            <Blog />
           </Route>
         </BrowserRouter>
       </div>
