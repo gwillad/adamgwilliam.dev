@@ -1,8 +1,15 @@
 import './App.css';
-import { Route, Redirect, BrowserRouter } from 'react-router-dom'
+import { 
+    Route, 
+    Redirect, 
+    Switch,
+    BrowserRouter as Router
+} from 'react-router-dom'
 import Resume from './pages/resume/Resume'
 import React from 'react';
 import Blog from './pages/blog/Blog';
+import NotFound from './pages/notFound/NotFound';
+import Navbar from './components/navbar/Navbar';
 
 class App extends React.Component {
   componentDidMount() {
@@ -12,17 +19,17 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <BrowserRouter>
-          <Route exact path="/">
-            <Redirect to="/resume" />
-          </Route>
-          <Route exact path="/resume">
-            <Resume />
-          </Route>
-          <Route exact path="/blog">
-            <Blog />
-          </Route>
-        </BrowserRouter>
+        <Router>
+            <Navbar />
+            <Switch>
+                <Route exact path="/">
+                    <Redirect to="/blog/first-post" />
+                </Route>
+                <Route exact path="/resume" render={() => <Resume />} />
+                <Route path="/blog/:title" render={({match}) => <Blog title={match.params.title} />} />
+                <Route render={()=> <NotFound />} />
+            </Switch>
+        </Router>
       </div>
     );
   }
