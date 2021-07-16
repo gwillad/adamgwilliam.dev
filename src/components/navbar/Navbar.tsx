@@ -1,15 +1,14 @@
 import { useRef, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
+import { Posts } from '../../pages/blog/posts';
+
 import Button from '@material-ui/core/Button'
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-
-import { Posts } from '../../pages/blog/posts';
-
 import './Navbar.css';
 
 export default function Navbar() {
@@ -43,7 +42,7 @@ export default function Navbar() {
                         {Posts.map(post => 
                             <MenuItem onClick={() => navigateTo(`/blog/${post.blogNavLink}`)} key={post.pageTitle}>
                                 {post.navTitle}
-                            </MenuItem>)
+                            </MenuItem>).reverse()
                         }
                     </Menu>
                 </div>

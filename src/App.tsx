@@ -1,15 +1,16 @@
-import './App.css';
+import { useEffect } from 'react';
 import { 
     Route, 
     Redirect, 
     Switch,
     BrowserRouter as Router
-} from 'react-router-dom'
-import Resume from './pages/resume/Resume'
-import { useEffect } from 'react';
-import Blog from './pages/blog/Blog';
-import NotFound from './pages/notFound/NotFound';
+} from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
+import Blog from './pages/blog/Blog';
+import Resume from './pages/resume/Resume';
+import NotFound from './pages/notFound/NotFound';
+
+import './App.css';
 
 export default function App() {
   useEffect(() => { 

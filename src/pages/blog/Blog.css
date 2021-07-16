@@ -10,3 +10,24 @@
 .content {
     text-align: left;
 }
+
+.blogNavContainer {
+    width: 75%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: white;
+}
+
+.prevButton {
+    align-self: flex-start;
+}
+
+.nextButton {
+    align-self: flex-end;
+}
+
+.tagList {
+    color: grey;
+}

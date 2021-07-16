@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
+
 import resume from '../../assets/resume.png';
+
 import './Resume.css';
 
 export default function Resume() {

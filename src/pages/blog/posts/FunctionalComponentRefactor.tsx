@@ -1,5 +1,4 @@
 export default function functionalComponentRefactor() {
-    
     return (
         <div>
             <h1 className="title">Refactoring the site</h1>
@@ -36,8 +35,7 @@ export default function functionalComponentRefactor() {
             </div>
             <div className="content">
                 <p>Welp, that was easy! I'm glad I did it and will definitely be looking forward to working with functional components and hooks in the future. Even just this 
-                    short exercise was useful in demistifying the whole concept. Check out the code 
-                    <a href="https://github.com/gwillad/adamgwilliam.dev/tree/functional-component-refator">here</a>.</p>
+                    short exercise was useful in demistifying the whole concept. Check out the code <a href="https://github.com/gwillad/adamgwilliam.dev/tree/functional-component-refator">here</a>.</p>
             </div>
         </div>
     );

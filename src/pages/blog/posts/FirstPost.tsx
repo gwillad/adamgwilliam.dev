@@ -1,5 +1,3 @@
-import "../Blog.css";
-
 export default function FirstPost() {
     return (
         <div>
