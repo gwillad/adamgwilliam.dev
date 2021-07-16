@@ -1,33 +1,23 @@
-import React from 'react';
-import bind from 'bind-decorator';
 import { Posts, NotFoundPost, Post } from './posts';
-import { Helmet } from 'react-helmet';
 
 import './Blog.css';
+import { useEffect, useState } from 'react';
 
 interface IBlogProps {
     title: string;
 }
-export default class Blog extends React.Component<IBlogProps> {
-    @bind
-    getPageToRender() : Post {
-        const page = Posts.find(post => post.blogNavLink === this.props.title);
-        if (page) return page;
-        return NotFoundPost;
-    }
+export default function Blog(props: IBlogProps) {
+    const [page, setPage] = useState<Post>(NotFoundPost);
+    useEffect(() => {
+        setPage(Posts.find(post => post.blogNavLink === props.title) || NotFoundPost);
+        document.title = page.pageTitle;
+    }, [page.pageTitle, props.title]);
 
-    render () {
-        const page = this.getPageToRender();
-
-        return (
-            <div>
-                <Helmet>
-                    <title>{ page.pageTitle }</title>
-                </Helmet>
-                <div className={"container"}>
-                    {page.element}
-                </div>
+    return (
+        <div>
+            <div className={"container"}>
+                {page.element}
             </div>
-            );
-    }
+        </div>
+    );
 }
