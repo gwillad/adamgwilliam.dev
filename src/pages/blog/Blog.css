@@ -11,6 +11,11 @@
     text-align: left;
 }
 
+.img {
+    width: 66%;
+    margin: 0 16.5%;
+}
+
 .blogNavContainer {
     width: 75%;
     margin: auto;
