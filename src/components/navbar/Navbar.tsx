@@ -26,8 +26,11 @@ export default function Navbar() {
             <Toolbar className="header">
                 <Button variant="contained" color="primary" disableElevation onClick={() => navigateTo(`/`)}><Typography variant="h6">adamgwilliam.dev</Typography></Button>
                 <div>            
-                    <Button variant="contained" color="primary" disableElevation onClick={() => navigateTo(`/resume`)} >
+                    {/* <Button variant="contained" color="primary" disableElevation onClick={() => navigateTo(`/resume`)} >
                         Resume
+                    </Button>                    */}
+                    <Button variant="contained" color="primary" disableElevation onClick={() => navigateTo(`/contact`)} >
+                        Contact
                     </Button>
                     <Button variant="contained" color="primary" disableElevation aria-controls="blog-menu" aria-haspopup="true" onClick={() => setBlogMenuOpen(true)} ref={blogMenuRef}>
                         Blog

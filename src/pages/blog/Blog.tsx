@@ -17,7 +17,7 @@ export default function Blog(props: IBlogProps) {
     const history = useHistory();
 
     useEffect(() => {
-        setCurrentPost(Posts.find(post => post.blogNavLink === props.title) || NotFoundPost);
+        setCurrentPost(props.title === "last" ? Posts[Posts.length - 1] : Posts.find(post => post.blogNavLink === props.title) || NotFoundPost);
     }, [currentPost.pageTitle, props.title]);
 
     useEffect(() => {

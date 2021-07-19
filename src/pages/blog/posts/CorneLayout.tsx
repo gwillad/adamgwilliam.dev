@@ -93,7 +93,7 @@ export default function CorneLayout() {
                 <p>The biggest issue with changes like this is just getting used to it. And, assuming I do get used to it (which is extremely likely to happen, just takes 
                     time) then porting it over to my other 40% boards!
                 </p>
-                <p>As always, feel free to hit me up if you have any questions!</p>
+                <p>As always, feel free to <a href="/contact">hit me up</a> if you have any questions!</p>
             </div>
         </div>
     );

@@ -11,10 +11,12 @@ export default function FirstPost() {
                     <li>&c</li>
                 </ul>
                 <p>But mostly I just want to maintain my thoughts on the platform while getting to work this site into something bigger. I would like this to be a place where I 
-                    can store most of my work and ideas.</p>
+                    can store most of my work and ideas.
+                </p>
                 <p>So! Enjoy, have a look around, do whatever. As you can see this is (currently) a completely static site. I don't really expect that to change any time soon, 
                     either. So as a matter of transparency, the code for the site can be found on <a href="https://github.com/gwillad/adamgwilliam.dev">github</a>. Feel free to 
-                    check out <a href="https://github.com/gwillad">my work</a> on github as well</p>
+                    check out <a href="https://github.com/gwillad">my work</a> on github as well, and <a href="/contact">contact</a> me.
+                </p>
             </div>
         </div>
     );
